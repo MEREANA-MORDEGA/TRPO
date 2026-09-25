@@ -9,4 +9,4 @@ Backlight powered from akkum 18650 LiIon.
 
 #Hyperlinks
 
-1. [OpenScad model holder for akkum 18650] (https://www.thingiverse.com/thing:456900/files) on site thingiverse.
+1. [OpenScad model holder for akkum 18650] (https://www.thingiverse.com/thing:456900) on site thingiverse.

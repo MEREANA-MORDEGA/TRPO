@@ -5,32 +5,40 @@ echo("Работа Ропацкого Евгения!");
 
 fitnes_frame = 4;
 
-w_back = 70;
-h_back = 45;
+d_akkum = 19;
+h_akkum = 65;
+d_wires = 1.2;
+
 thickness_back = 1;
 thickness_walls = 2;
 thickness_bottom = 2;
+
+w_back = 70;
+h_back = 45;
+thicness_back = 1;
 h_walls = 4;
 gap_backlight = 1.5;
-build_frame();
-d_akkum = 19;
-h_akkum = 65;
 
 
 
-////rotate([90, 0, 0])
-//translate([0, 0, 4])
-//backlight();
-//kit_frame();
-//akkum18650();
+kit_frame();
+module wires(){
+    translate([w_back/2, -h_back/2+6, h_walls/2+0.5])
+    rotate([0, 90, 0])
+    color("black")
+    cylinder(d=d_wires, h=25, center=true, $fn=32);
 
-
-
+    translate([w_back/2, -h_back/2+2, h_walls/2+0.5])
+    rotate([0, 90, 0])
+    color("red")
+    cylinder(d=d_wires, h=25, center=true, $fn=32);
+}
 module kit_frame(){
-bottom();
-color("blue")
-translate([0, 0, h_walls/2+thickness_bottom/2])
-walls();
+    bottom();
+    //color("blue")
+    translate([0, 0, h_walls/2+thickness_bottom/2])
+    walls();
+    wires();
 }
 
 module walls(){
